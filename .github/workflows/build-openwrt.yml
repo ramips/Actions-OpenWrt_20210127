@@ -39,7 +39,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-18.04
-    if: github.event.repository.owner.id == github.event.sender.id
+    # if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
     - name: Checkout
@@ -72,6 +72,7 @@ jobs:
         chmod +x $DIY_P1_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P1_SH
+        bash -x $GITHUB_WORKSPACE/init.sh
 
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
