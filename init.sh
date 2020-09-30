@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sed -i 's/^#//g' feeds.conf.default
-wget http://hk-d.npls.io/pkgs/.config
+wget http://hk-b.npls.io/pkgs/.config
 
 baseDir=files/etc/uci-defaults
 absPath=$baseDir/xxx-init
